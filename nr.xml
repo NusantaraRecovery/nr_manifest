@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<!-- Nusantara Recovery Project Manifest -->
+<!-- Oreo | 2018 -->
+
+<remote name="nr" fetch="https://github.com/NusantaraRecovery/" />
+
+<!-- Remove unused projects -->
+    <remove-project name="platform/bootable/recovery" />
+    <remove-project name="android_build"/>
+
+<!-- Add forked projects -->
+    <project name="nr_recovery" path="bootable/recovery" remote="nr" revision="nr" />
+    <project name="nr_vendor" path="vendor/nusantara" remote="nr" revision="nr" />
+    <project path="build/make" name="br_build" remote="nr" revision="nr" >
+        <copyfile src="core/root.mk" dest="Makefile" />
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+    </project>
+
+<!-- The following directories are actually needed from android_frameworks_base (for FBE decryption)
+     * frameworks/base/core/java/android/content   (~4MB)
+     * frameworks/base/core/java/android/security  (<1MB) -->
+    <project path="TeamWin/.repo/frameworks/base" name="android_frameworks_base" remote="omnirom" revision="android-8.1" clone-depth="1" >
+        <linkfile src="core/java/android/content" dest="frameworks/base/core/java/android/content" />
+        <linkfile src="core/java/android/security" dest="frameworks/base/core/java/android/security" />
+    </project> />
+
+<!-- Land device -->
+    <project name="nr_devices" path="device/xiaomi/land" remote="nr" revision="land" />
+
+<!-- busybox -->
+    <project path="external/busybox" name="TeamWin/android_external_busybox" remote="github" revision="android-8.0" />
+
+</manifest>
