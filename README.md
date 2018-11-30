@@ -62,7 +62,7 @@ Then to sync up :
  Clone Device Tree Of Nusantara Recovery
 =============================
 
-Ceck on https://github.com/BatikRecovery/br_devices for your device
+Check on https://github.com/NusantaraRecovery/nr_devices for your device
 
 Example :
 
