@@ -19,7 +19,7 @@ Credits
 * [**TEAMWIN RECOVERY PROJECT (BASE)**](https://github.com/TeamWin)
 * [**OMNIROM**](https://github.com/omnirom)
 * [**REDWOLF RECOVERY PROJECT**](https://github.com/RedWolfRecovery)
-* [**PITCHBLACK RECOVERY PROJECT**](https://github.com/PitchBlack-Recovery)
+* [**PITCHBLACK RECOVERY PROJECT**](https://github.com/PitchBlackRecoveryProject)
 * [**DARK RECOVERY PROJECT**](https://github.com/DarkRecovery)
 * [**ORANGEFOX RECOVERY PROJECT**](https://gitlab.com/OrangeFox)
 * [**BATIK RECOVERY PROJECT**](https://github.com/BatikRecovery)
